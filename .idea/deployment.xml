@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="Remote Host (3072be65-1c14-4201-9e02-cef2abe7226f)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/441asg3RoutingTradeoffs" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="WSL (bb861f69-f832-4aaa-b4cb-5a218d984fb0)">
         <serverdata>
           <mappings>

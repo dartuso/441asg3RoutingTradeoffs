@@ -18,7 +18,7 @@ public:
 	                                                                                                  event_type(event_type)
 	{
 		endTime = startTime + duration;
-		if (callid == CALL_ARRIVAL){
+		if (event_type == CALL_ARRIVAL){
 			eventTime = startTime;
 		}else{
 			eventTime = endTime;

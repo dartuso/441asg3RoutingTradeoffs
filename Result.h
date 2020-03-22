@@ -8,7 +8,8 @@
 #include <string>
 #include <iostream>
 #include "Edge.h"
-#define MAX_VERTEX 4
+#include "Event.h"
+#define MAX_VERTEX 20
 
 enum typeAlgorithm{
 	SHPF,
@@ -27,20 +28,25 @@ public:
 		hops = 0;
 		delay = 0;
 
-		if(algo == "SHPF"){
+		if(algorithmStr == "SHPF"){
 			algorithmEnum = SHPF;
-		} else if (algo == "SDPF"){
+		} else if (algorithmStr == "SDPF"){
 			algorithmEnum = SDPF;
-		}else if(algo == "LLP"){
+		}else if(algorithmStr == "LLP"){
 			algorithmEnum = LLP;
-		} else if (algo == "MFC"){
+		} else if (algorithmStr == "MFC"){
 			algorithmEnum = MFC;
 		}
 	}
 	Edge graph[MAX_VERTEX][MAX_VERTEX];
+	list<Event> events;
 
+	typeAlgorithm getAlgorithmEnum() const {
+		return algorithmEnum;
+	}
 
 	void printCapacity(){
+		cout << flush;
 		for (int i = 0; i < MAX_VERTEX; ++i) {
 			for (int j = 0; j < MAX_VERTEX; ++j) {
 				cout << graph[i][j].getCapacity() << " ";
